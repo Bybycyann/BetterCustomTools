@@ -20,9 +20,9 @@
 
 |        函数        |                             功能                             |                             说明                             |
 | :----------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|  `#bct:item.get`   |     获取物品数据到 `bct.io stack[-1].CONTEXT.item_data`      | 需要向 `bct:io stack[-1].CONTEXT.hand` 中写入 `(mainhand|offhand)` |
-| `#bct:item.update` | 将 `bct:io stack[-1].item_update` 的数据合并到目标物品上 (merge) | 需要向 `bct:io stack[-1].CONTEXT.hand` 中写入 `(mainhand|offhand)`<br />需要向 `bct:io stack[-1].item_update` 中传入待合并的数据 |
-|   `#bct:item.cd`   | 获取目标物品的冷却情况, 返回值为 1 (冷却结束) 或 0 (冷却中)  | 需要向 `bct:io stack[-1].CONTEXT.hand` 中写入 `(mainhand|offhand)` |
+|  `#bct:item.get`   |     获取物品数据到 `bct.io stack[-1].CONTEXT.item_data`      |             CONTEXT: {hand: (mainhand\|offhand)}             |
+| `#bct:item.update` | 将 `bct:io stack[-1].item_update` 的数据合并到目标物品上 (merge) | CONTEXT: {hand: (mainhand\|offhand)<br />需要向 `bct:io stack[-1].item_update` 中传入待合并的数据 |
+|   `#bct:item.cd`   | 获取目标物品的冷却情况, 返回值为 1 (冷却结束) 或 0 (冷却中)  |             CONTEXT: {hand: (mainhand\|offhand)              |
 | `#bct:using.exit`  |                   打断一个使用状态 (using)                   |                              -                               |
 |    `#bct:macro`    |                        调用一个宏命令                        | 需要向 `bct:io stack[-1].command` 中写入目标命令<br />需要将 `bct:io stack[-1]` 作为宏参数传入 |
 
