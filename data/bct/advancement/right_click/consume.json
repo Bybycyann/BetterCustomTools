@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "tags": ["#bct:right_click"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "bct:trigger/right_click/consume/main"
+  }
+}

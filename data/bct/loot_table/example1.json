@@ -1,0 +1,51 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:recovery_compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具1"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me example1", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example1", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example1",
+                  "tags": ["#bct:right_click"],
+                  "event": {
+                    "right_click": "me example1"
+                  }
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:recovery_compass",
+                  "components": {
+                    "minecraft:custom_name": "",
+                    "minecraft:custom_data": {
+                      "id": "bct:example1",
+                      "tags": ["$bct:used"],
+                      "remainder": "bct:example1",
+                      "command": "me remainder1"
+                    }
+                  }
+                },
+                "minecraft:consumable": {
+                  "animation": "none",
+                  "consume_seconds": 0,
+                  "has_consume_particles": false,
+                  "sound": "minecraft:intentionally_empty"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

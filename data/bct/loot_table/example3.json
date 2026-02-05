@@ -1,0 +1,53 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具3"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me example3", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example3", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example3",
+                  "tags": ["#bct:right_click"],
+                  "event": {
+                    "right_click": "me example3"
+                  }
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:iron_ingot",
+                  "components": {
+                    "minecraft:custom_name": "",
+                    "minecraft:custom_data": {
+                      "id": "bct:example3",
+                      "tags": ["$bct:used"],
+                      "remainder": {
+                        "type": "self"
+                      },
+                      "command": "me 返还自身"
+                    }
+                  }
+                },
+                "minecraft:consumable": {
+                  "animation": "none",
+                  "consume_seconds": 0,
+                  "has_consume_particles": false,
+                  "sound": "minecraft:intentionally_empty"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

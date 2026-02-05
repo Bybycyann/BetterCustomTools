@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": {
+              "tags": ["#bct:using"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "bct:trigger/using/main"
+  }
+}

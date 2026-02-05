@@ -1,0 +1,49 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具7"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me example7 left", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example7", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example7",
+                  "tags": ["#bct:left_click"],
+                  "event": {
+                    "left_click": "me example7 left"
+                  }
+                },
+                "minecraft:enchantments": {
+                  "bct:left_click": 1
+                },
+                "minecraft:minimum_attack_charge": 0,
+                "minecraft:piercing_weapon": {
+                  "sound": "minecraft:intentionally_empty",
+                  "hit_sound": "minecraft:intentionally_empty"
+                },
+                "minecraft:attack_range": {
+                  "min_reach": 0,
+                  "max_reach": 0,
+                  "min_creative_reach": 0,
+                  "max_creative_reach": 0,
+                  "hitbox_margin": 0,
+                  "mob_factor": 0
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

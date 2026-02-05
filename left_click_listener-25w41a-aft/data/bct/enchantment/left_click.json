@@ -1,0 +1,33 @@
+{
+  "effects": {
+    "minecraft:post_piercing_attack": [{
+      "effect": {
+        "type": "minecraft:run_function",
+        "function": "bct:trigger/left_click/main"
+      },
+      "requirements": {
+        "condition": "minecraft:entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {
+            "weapon.mainhand": {
+              "predicates": {
+                "minecraft:custom_data": {
+                  "tags": ["#bct:left_click"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }]
+  },
+  "description": {"text": "左键监听器", "color": "aqua"},
+  "anvil_cost": 0,
+  "max_level": 1,
+  "weight": 1,
+  "min_cost": {"base": 0, "per_level_above_first": 0},
+  "max_cost": {"base": 0, "per_level_above_first": 0},
+  "supported_items": [],
+  "slots": ["mainhand"]
+}

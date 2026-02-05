@@ -1,0 +1,55 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具4"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me using", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example4", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example4",
+                  "tags": ["#bct:right_click","#bct:using"],
+                  "event": {
+                    "right_click": "help",
+                    "using": {
+                        "re": "me ↑",
+                        "ah": "me ·",
+                        "fe": "me ↓"
+                    }
+                  }
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:gold_ingot",
+                  "components": {
+                    "minecraft:custom_name": "",
+                    "minecraft:custom_data": {
+                      "id": "bct:example4",
+                      "tags": ["$bct:used"],
+                      "remainder": {"type": "self"}
+                    }
+                  }
+                },
+                "minecraft:consumable": {
+                  "animation": "bow",
+                  "consume_seconds": 10000,
+                  "has_consume_particles": false,
+                  "sound": "minecraft:intentionally_empty"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

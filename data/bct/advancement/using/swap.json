@@ -1,0 +1,41 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {"bct.fsm.using": {"min": 1}}
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.*": {
+                  "predicates": {
+                    "minecraft:custom_data": {
+                      "tags": ["#bct:using"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "items": [{
+          "predicates": {
+            "minecraft:custom_data": {
+              "tags": ["#bct:using"]
+            }
+          }
+        }]
+      }
+    }
+  },
+  "rewards": {
+    "function": "bct:trigger/using/swap"
+  }
+}

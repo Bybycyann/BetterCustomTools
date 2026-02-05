@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{
+          "predicates": {
+            "minecraft:custom_data": {
+              "tags": ["$bct:used"]
+            }
+          }
+        }]
+      }
+    }
+  },
+  "rewards": {
+    "function": "bct:trigger/right_click/remainder/main"
+  }
+}

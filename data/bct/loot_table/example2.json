@@ -1,0 +1,54 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:paper",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具2"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me example2", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example2", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example2",
+                  "tags": ["#bct:right_click"],
+                  "event": {
+                    "right_click": "me example2"
+                  }
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:paper",
+                  "components": {
+                    "minecraft:custom_name": "",
+                    "minecraft:custom_data": {
+                      "id": "bct:example2",
+                      "tags": ["$bct:used"],
+                      "remainder": "bct:example2"
+                    }
+                  }
+                },
+                "minecraft:consumable": {
+                  "animation": "none",
+                  "consume_seconds": 0,
+                  "has_consume_particles": false,
+                  "sound": "minecraft:intentionally_empty"
+                },
+                "minecraft:use_cooldown": {
+                  "seconds": 10,
+                  "cooldown_group": "bct:example2"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

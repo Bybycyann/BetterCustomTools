@@ -1,0 +1,33 @@
+{
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:compass",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {"text": "示例道具6"},
+                "minecraft:lore": [
+                  {"fallback": "command：%s", "with": [{"text": "me example6 hold", "color": "gold"}], "color": "aqua", "italic": false, "translate": ""},
+                  {"text": "bct:example6", "color": "dark_gray", "italic": false},
+                  {"text": "BetterCustomTools", "color": "blue"}
+                ],
+                "minecraft:custom_data": {
+                  "id": "bct:example6",
+                  "tags": ["#bct:hold"],
+                  "event": {
+                    "hold": "me example6 hold"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}
