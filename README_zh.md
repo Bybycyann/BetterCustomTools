@@ -3,8 +3,11 @@
 [English](./README.md) | 简体中文
 
 > **受支持的游戏版本**
+>
 > 26.1, 1.21.11, 1.21.10, 1.21.9, 1.21.8, 1.21.7, 1.21.6, 1.21.5, 1.21.4
+>
 > **依赖项**
+>
 > [PlayerDataExpansion](https://github.com/Bybycyann/PlayerDataExpansion)
 
 ## 概览
