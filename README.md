@@ -28,7 +28,7 @@ This datapack abstracts item interaction triggers such as **use**, **long-press*
 
 ## Item Registration
 
-PDE provides a component-based item registration workflow, eliminating the need to spend time setting up complex triggers during content creation.
+BCT provides a component-based item registration workflow, eliminating the need to spend time setting up complex triggers during content creation.
 
 The core properties are stored in the item’s `custom_data` component. Combined with other functional components, the structure is as follows:
 
